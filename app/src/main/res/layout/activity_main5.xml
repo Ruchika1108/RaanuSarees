@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.ruchika.raanusarees.Main5Activity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOG IN"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:fontFamily="monospace"/>
+        <EditText
+            android:layout_margin="15dp"
+            android:inputType="textEmailAddress"
+            android:id="@+id/logemail"
+            android:hint="Enter e-mail ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_margin="15dp"
+            android:inputType="textPassword"
+            android:id="@+id/logpass"
+            android:hint="Enter your Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_margin="15dp"
+            android:id="@+id/logbut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2bb9a4"
+            android:text="LOG IN" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "934541740214",
+    "firebase_url": "https://raanusarees.firebaseio.com",
+    "project_id": "raanusarees",
+    "storage_bucket": "raanusarees.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934541740214:android:66e90188a60939ed",
+        "android_client_info": {
+          "package_name": "com.ruchika.raanusarees"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934541740214-ro2h6itv52k4p8difi8j0dat5oo3mhle.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1lHUHcW10KmEXJtppcTxmGRffNEZxQEE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

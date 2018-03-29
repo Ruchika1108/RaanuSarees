@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ruchika.raanusarees.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:background="@drawable/background">
+
+
+    <TextView
+        android:id="@+id/textViewHeaderSID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="cursive"
+        android:text="Raanu Sarees"
+        android:textColor="#00ff27"
+        android:textSize="70dp" />
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="69dp"
+        android:layout_marginStart="37dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/facebook"
+        android:onClick="fbpage"
+        android:id="@+id/imageButton" />
+
+    <TextView
+        android:id="@+id/editText3"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/imageButton"
+        android:ems="10"
+        android:inputType="textMultiLine"
+
+        android:text="Above Navkar Jewelry, Bartan Bazaar, Aurangabad, Maharashtra"
+        android:textColor="#7524e7"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Enquiry Time: 11:00-8:30"
+        android:textSize="15dp"
+        android:textColor="#8c47ec"/>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imageButton"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@+id/imageButton"
+        android:onClick="whopen"
+        android:scaleType="fitCenter"
+        app:srcCompat="@mipmap/watsapp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imageButton2"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/imageButton2"
+        android:onClick="pcall"
+        android:scaleType="fitStart"
+        app:srcCompat="@mipmap/phone" />
+
+
+</RelativeLayout>
