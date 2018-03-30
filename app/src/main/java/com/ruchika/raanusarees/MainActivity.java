@@ -214,8 +214,12 @@ Button b;
             startActivity(intent);
 
         } else if (id == R.id.nav_slideshow) {
+            Intent intent =new Intent(this,Buy_Sari.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
+            Intent intent =new Intent(this,Jewellery.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_share) {
             Intent i = new Intent(this, Main5Activity.class);
