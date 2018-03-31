@@ -93,6 +93,8 @@ private FirebaseAuth firebaseAuth;
         if(view==tv)
         {
             //start login activity
+            Intent i = new Intent(this, Main5Activity.class);
+            startActivity(i);
         }
 
     }

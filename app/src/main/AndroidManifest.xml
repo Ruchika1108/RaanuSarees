@@ -28,11 +28,13 @@
         <activity android:name=".Main3Activity" />
         <activity android:name=".Main4Activity" />
         <activity android:name=".Main5Activity" />
-        <activity android:name=".signout" />
         <activity android:name=".non_bridal" />
         <activity android:name=".description" />
         <activity android:name=".Bridal" />
-        <activity android:name=".description_bridal"></activity>
+        <activity android:name=".description_bridal" />
+        <activity android:name=".Buy_Sari" />
+        <activity android:name=".Sari_Description" />
+        <activity android:name=".Jewellery"></activity>
     </application>
 
 </manifest>

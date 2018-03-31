@@ -77,7 +77,7 @@ public class description_bridal extends AppCompatActivity implements AdapterView
         @Override
         public void onItemSelected (AdapterView < ? > adapterView, View view,int i, long l){
             String item = adapterView.getItemAtPosition(i).toString();
-            Toast.makeText(this, "Selected" + item, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Selected " + item, Toast.LENGTH_LONG).show();
         }
 
         @Override

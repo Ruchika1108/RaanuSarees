@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,7 +37,10 @@ Button b;
        FirebaseUser firebaseUser;
        NavigationView mNavigationView;
        TextView mName,mID;
-       DatabaseReference databaseReference;
+   ImageView imageView;
+      
+
+
  
 
     @Override
@@ -46,9 +50,13 @@ Button b;
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
      b=(Button)findViewById(R.id.signout);
+     imageView=(ImageView)findViewById(R.id.imageView);
+       // View header=imageView.getHeaderView(0);
         firebaseAuth =firebaseAuth.getInstance();
-        //firebaseUser = firebaseAuth.getCurrentUser();
-       // databaseReference = FirebaseDatabase.getInstance().getReference().child("raanusarees").child(firebaseUser.getUid());
+        firebaseUser = firebaseAuth.getCurrentUser();
+
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -67,30 +75,16 @@ Button b;
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-     /*   mNavigationView = (NavigationView) findViewById(R.id.nav_view);
-        mName   = (TextView)mNavigationView.getHeaderView(0).findViewById(R.id.textViewHeaderTitle);
-        mID   = (TextView)mNavigationView.getHeaderView(0).findViewById(R.id.textViewHeaderSID);
-
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange (DataSnapshot dataSnapshot){
-
-                //Fetch values from you database child and set it to the specific view object.
-                mName.setText(dataSnapshot.child("name").getValue().toString());
-                mID.setText(dataSnapshot.child("sid").getValue().toString());
-
-                // String link = dataSnapshot.child("profile_picture").getValue().toString();
-                //Picasso.with(getBaseContext()).load(link).into(mImageView);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
+        mName=(TextView)navigationView.getHeaderView(0).findViewById(R.id.textViewHeaderSID);
+        if(firebaseUser != null)
+        {
+            mName.setText(firebaseUser.getEmail());
+        }
+        else if(firebaseUser == null){
+            mName.setText("Welcome guest");
+        }
 
 
-        }); */
 
     }
 
@@ -230,12 +224,18 @@ Button b;
             startActivity(intent);
         } else if (id == R.id.signout)
         {
-            Toast.makeText(this, "Signing out", Toast.LENGTH_SHORT).show();
-            firebaseAuth.signOut();
-            finish();
-            startActivity(new Intent(this,Main5Activity.class));
-          /*  Intent intent =new Intent(this,signout.class);
+            if(firebaseUser !=null) {
+                Toast.makeText(this, "Signing out " + firebaseUser.getEmail(), Toast.LENGTH_SHORT).show();
+                firebaseAuth.signOut();
+                finish();
+                startActivity(new Intent(this, Main5Activity.class));
+           /* Intent intent =new Intent(this,signout.class);
             startActivity(intent); */
+            }
+            else if(firebaseUser == null)
+            {
+                Toast.makeText(this, "Already signed out ", Toast.LENGTH_LONG).show();
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
