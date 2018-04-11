@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "934541740214-5m695r4eu065fved065mebcj6n303prj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ruchika.raanusarees",
+            "certificate_hash": "2f3c18d7ac62d2e7b5a7f3eb6b44fcddfacea50e"
+          }
+        },
+        {
           "client_id": "934541740214-ro2h6itv52k4p8difi8j0dat5oo3mhle.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934541740214-ro2h6itv52k4p8difi8j0dat5oo3mhle.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
