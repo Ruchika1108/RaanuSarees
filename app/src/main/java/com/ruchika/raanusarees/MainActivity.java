@@ -38,7 +38,7 @@ Button b;
        NavigationView mNavigationView;
        TextView mName,mID;
    ImageView imageView;
-      
+
 
 
  
@@ -212,7 +212,7 @@ Button b;
             startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
-            Intent intent =new Intent(this,Jewellery.class);
+            Intent intent =new Intent(this,upload.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_share) {
