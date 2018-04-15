@@ -201,10 +201,10 @@ Button b;
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            Intent intent =new Intent(this,Bridal.class);
+            Intent intent = new Intent(this, ImagesActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_gallery) {
-           Intent intent =new Intent(this,non_bridal.class);
+           Intent intent =new Intent(this,upload.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_slideshow) {
@@ -212,7 +212,7 @@ Button b;
             startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
-            Intent intent =new Intent(this,upload.class);
+            Intent intent =new Intent(this,Jewellery.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_share) {

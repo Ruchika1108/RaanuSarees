@@ -3,12 +3,14 @@ package com.ruchika.raanusarees;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.icu.util.Calendar;
 import android.net.Uri;
 import android.os.Build;
+import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,6 +27,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseError;
+import com.squareup.picasso.Picasso;
 
 import java.util.TimeZone;
 
@@ -40,7 +43,8 @@ public class description extends Activity  implements AdapterView.OnItemSelected
     DatePicker datePicker;
     Button b1, btn_date;
     static ImageView iv;
-
+String mImageUri;
+Context mContext;
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +63,21 @@ public class description extends Activity  implements AdapterView.OnItemSelected
 
         // tv.setText(new StringBuilder().append(date).append("-").append(month+1).append("-").append(year));
         Bundle bundle = getIntent().getExtras();
-        int value = bundle.getInt("pos");
-        switch (value) {
+        mImageUri = bundle.getString("pos");
+
+      /*  try {
+            Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), Uri.parse(mImageUri));
+
+            //Setting image to ImageView
+            iv.setImageBitmap(bitmap);
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        } */
+        iv.setImageURI(Uri.parse(mImageUri));
+
+
+       /* switch (value) {
 
             case 0:
                 iv.setImageResource(R.drawable.gha1);
@@ -84,8 +101,10 @@ public class description extends Activity  implements AdapterView.OnItemSelected
             case 7: iv.setImageResource(R.drawable.saa9);break;
 
 
-        }
+        } */
     }
+
+
 
 
     @Override
